@@ -1,0 +1,27 @@
+package homework;
+
+import java.util.Scanner;
+
+public class Homework2 {
+
+	public static void main(String[] args) {
+		
+		// klavyeden girilen 10 luk tabandaki sayıyı 2'lik ve 16'lık sayı sistemine çeviren program
+		
+		Scanner klavye = new Scanner(System.in);
+		int sayi;
+		
+		System.out.print("Lütfen dönüştürmek istediğiniz sayıyı giriniz : ");
+		sayi = klavye.nextInt();
+		System.out.println(Integer.toString(sayi, 2));
+		System.out.println(Integer.toString(sayi,16));
+		
+		klavye.close();
+		    }
+		}
+	  
+	    
+
+	
+
+
