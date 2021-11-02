@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class AsalSayiBulma {
+
+	public static void main(String[] args) {
+		// girilen sayının asal olup olmadığını bulan program
+        
+		double input;
+		int i;
+		Scanner klavye = new Scanner(System.in);
+		boolean asal=true;
+		do {
+			
+			
+			System.out.println("lütfen bir sayı giriniz : ");
+			input = klavye.nextDouble();
+		}
+		while(input<2); {
+			for(i=2;i<input;i++) {
+				
+		if(input%i==0) {
+			
+			asal =false;
+			
+		}		
+		
+		if(asal == true) {
+			
+			System.out.println("Girilen sayı asaldır :)");
+			
+		}
+		else{
+			System.out.println("Girilen sayı asal değildir :(");
+			break;
+		}		
+				
+			}
+			
+			
+		}
+		
+	}
+
+}
