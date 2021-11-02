@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class WhileOrnekleri2 {
+
+	public static void main(String[] args) {
+  
+ int sayi;
+		Scanner klavye= new Scanner(System.in);
+		System.out.print("Lütfen bir sayı giriniz : ");
+		sayi= klavye.nextInt();
+		int i=1;
+		while(i<=sayi) {
+			int k=1;
+			while(k<=i) {
+				System.out.print("*");
+				k++;
+			}
+			System.out.println();
+			i++;
+		
+	} 
+
+}
