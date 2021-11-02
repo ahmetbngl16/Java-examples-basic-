@@ -1,0 +1,46 @@
+package homework;
+import java.util.Scanner;
+public class Homework1 {
+
+	public static void main(String[] args) {
+		// klavyeden girilen 5 basamaklı sayının basamak değerini ekrana yazdıran program...
+		// 54235%10=5 == birler basamağı ,
+		// 54235%100=35 onlar basamağı=35-birler basamağı,
+		// 54235%1000=235 yuzler=235-(onlar+birler) , 
+		// 54235%10000=4235 binler=4235-(birler+onlar+yuzler)
+		// onbinler=54235-(binler+yuzler+onlar+birler);
+		
+		Scanner klavye = new Scanner(System.in);
+		int tmp,sayi1,birler,onlar,yuzler,binler,onbinler;
+		
+	System.out.print("Lütfen 5 basamaklı bir sayı giriniz : ");	
+    sayi1 = klavye.nextInt();
+    klavye.close();
+    if(sayi1>=10000 && sayi1<=99999) {
+    	
+    	tmp=sayi1;
+    	birler=tmp%10;
+    	onlar=tmp%100-birler;
+    	yuzler=tmp%1000-(birler+onlar);
+    	binler=tmp%10000-(birler+onlar+yuzler);
+    	onbinler=tmp-(birler+onlar+yuzler+binler);
+    	
+    	System.out.println("Girdiğiniz sayının basamak değerleri : ");
+    	System.out.println("Girdiğiniz sayının birler basamağı değeri : " + birler);
+    	System.out.println("Girdiğiniz sayının onlar basamağı değeri : " + onlar  );
+    	System.out.println("Girdiğiniz sayının yüzler basamağı değeri : " + yuzler);
+    	System.out.println("Girdiğiniz sayının binler basamağı değeri : " + binler);
+    	System.out.println("Girdiğiniz sayının onbinler basamağı değeri : " + onbinler);
+    	
+    	
+    	
+    }
+    
+    else {
+    	System.out.println("Girdiğiniz sayı tanımlı aralıkta değildir");
+    }
+    
+	
+	}
+
+}
