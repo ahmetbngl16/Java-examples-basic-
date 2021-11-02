@@ -1,0 +1,64 @@
+import java.util.Scanner;
+public class Ucakbiletiprojesi {
+
+	public static void main(String[] args) {
+		//km birim fiyatı 0.10 tl
+		//12 yaşından küçükse toplam fiyatta %50 indirim
+		//12 ve 24 yaş aralığında ise toplam fiyatta %30 indirim
+		//65 yaş ve üzeriyse toplam fiyatta %30
+		//gidiş dönüş aldıysa toplam fiyatta %20 indirim
+		
+		Scanner scan = new Scanner(System.in);
+		int km,yaş,tip;
+		double toplamfiyat,indirimlifiyat,yaşindirimi;
+        
+		System.out.println("Lütfen toplam mesafeyi giriniz : ");
+		km = scan.nextInt();
+		System.out.println("Lütfen yaşınızı giriniz : ");
+		yaş= scan.nextInt();
+		System.out.println("\nİşlem tipini seçiniz : \n(1=Gidiş 2=Gidiş Dönüş)");
+		tip =scan.nextInt();
+		
+		if(km>0 && yaş>0 && (tip==1 || tip==2)) 
+		{
+			
+			toplamfiyat=km*0.10;
+			
+			if(yaş<=12) {yaşindirimi=toplamfiyat*0.5;}
+			
+			else if(yaş>12 && yaş<=24 || yaş>=65)
+				
+			{yaşindirimi=toplamfiyat*0.3;}
+			
+			
+			else {yaşindirimi=0;}
+			
+			toplamfiyat = toplamfiyat-yaşindirimi;
+			
+			if(tip==1) {
+				
+				toplamfiyat=toplamfiyat;
+			}
+			
+			else if (tip==2) {
+				toplamfiyat=toplamfiyat*2;
+			}
+			else {
+				
+				System.out.println("Doğru işlem tipini seçiniz");
+			}
+			
+			System.out.print("Ödemeniz gereken ücret : " + toplamfiyat + "TL");
+			}
+			
+			
+			
+			
+		
+		else {
+			
+			System.out.println("EKSİK VEYA HATALI BİLGİ GİRDİNİZ LÜTFEN KONTROL EDİNİZ");
+		}
+	}
+
+}
