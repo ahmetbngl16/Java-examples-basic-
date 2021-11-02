@@ -1,0 +1,29 @@
+package homework;
+import java.util.Scanner;
+public class Homework4 {
+
+	public static void main(String[] args) {
+		// a>b>c , a<b+c , b<a+c , c<b+a , 5>4>3 5<4+3 , 4<5+3 , 3<4+5 a>b-c , b>a-c, c>a-b üçgen çizme şartı
+		
+		int a,b,c;
+		Scanner klavye = new Scanner(System.in);
+		System.out.println(" lütfen en uzun kenarı giriniz : ");
+	    a = klavye.nextInt();
+	    System.out.println(" lütfen ortanca kenarı giriniz : ");
+	    b= klavye.nextInt();
+	    System.out.println(" lütfen en kısa kenarı giriniz : ");
+	    c = klavye.nextInt();
+	    
+	    klavye.close();
+	    
+	    if(a>b && b>c && a<b+c && b<a+c && c<b+a && a>b-c && b>a-c && c>a-b) {
+	    	
+	    	System.out.println("Bu üçgen çizilebilir : " + a +"-" +b+"-"+c);
+	    }
+	    
+	    else {
+	    	System.out.println("Bu üçgen çizilemez");
+	    }
+	}
+
+}
