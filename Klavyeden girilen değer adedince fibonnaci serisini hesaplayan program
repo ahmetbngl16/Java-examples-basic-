@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class FibonacciSerisi {
+
+	public static void main(String[] args) {
+		// fibonacci serisi : 0,1,1,2,3,5,8,13,...
+		
+	    int i,input,s1=0,s2=1,toplam;
+	    Scanner klavye = new Scanner(System.in);
+	    System.out.println("lütfen bir sayı giriniz : ");
+	    input= klavye.nextInt();
+	    System.out.println("Fibonacci sayı dizisi : ");
+	    
+	    for(i=1;i<input;i++) {
+	    	
+	    	System.out.print( s1+" , ");
+	    	toplam = s1+s2;
+	    	s1=s2;
+	    	s2=toplam;
+	    	
+	    }
+
+	}
+
+}
