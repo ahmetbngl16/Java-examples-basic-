@@ -1,0 +1,45 @@
+package homework;
+
+public class Homework3 {
+
+	public static void main(String[] args) {
+
+
+
+	
+		// 153 = (1*1*1)+(5*5*5)+(3*3*3) bir armstrong sayıdır
+		// 371 = (3*3*3)+(7*7*7)+(1*1*1) bir armstrong sayıdır
+		// 3 haneli armstrong sayıları bulan program
+		
+       int temp,i,birler,onlar,yuzler,toplam;
+       for(i=100;i<999;i++) {
+    	   
+    	   temp=i;
+    	   
+    	   birler = temp%10;
+    	   temp=temp/10;
+    	   onlar = temp%10;
+    	   yuzler=temp/10;
+    	   
+    	   toplam=(yuzler*yuzler*yuzler)+(onlar*onlar*onlar)+(birler*birler*birler);
+    	   
+    	   if(toplam==i) {
+    		   
+    		   System.out.println("bu bir armstrong sayıdır = " + i);
+    	   }
+    	   
+    	   
+       }
+
+	
+
+
+
+// 153%10==3(birler basamağı)
+// 153/10==15
+// 15%10==5(onlar basamağı)
+// 15/10==1.xxx(yüzler basamağı)
+
+	}
+
+}
