@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class WhileOrnekleri2 {
+
+	public static void main(String[] args) {    
+    
+    double sayi;
+		double harmonic=0.0;
+		System.out.println("Sayı Giriniz");
+		Scanner klavye = new Scanner(System.in);
+		sayi = klavye.nextDouble();
+		while(sayi>0) {
+			harmonic +=(1/sayi);
+			sayi--;
+			
+		}
+		System.out.println(harmonic);
+    
+    }
+    }
