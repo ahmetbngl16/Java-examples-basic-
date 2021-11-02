@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class EbobEkokBulanProgram {
+
+	public static void main(String[] args) {
+		//Ebob=İki sayının en büyük ortak böleni 
+		//Ekok=İki sayının en küçük ortak katı
+		//EKOK=(s1*s2)/ebob
+		
+		Scanner klavye = new Scanner(System.in);
+		int s1,s2,ebob=1,i,ekok;
+		System.out.print("Lütfen iki sayı giriniz : ");
+		s1 = klavye.nextInt();
+		s2 = klavye.nextInt();
+		
+		int min = (s1<s2) ?  s1 : s2 ;
+		
+		for (i=min;i>0;i--) {
+			
+			if((s1%i==0)&&(s2%i==0)) {
+				ebob =i;
+				break;
+			}
+		}
+        ekok=(s1*s2)/ebob;
+        System.out.println("Ekok : "+ekok+" Ebob : "+ebob);
+	}
+
+}
