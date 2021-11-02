@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class WhileOrnekleri2 {
+
+	public static void main(String[] args) {
+	
+        	
+		int sayi,fakt=1;
+		Scanner klavye = new Scanner(System.in);
+		System.out.println("LÜTFEN FAKTÖRİYELİNİ HESAPLAMAK İSTEDİĞİNİZ SAYIYI GİRİNİZ : ");
+		sayi = klavye.nextInt();
+		klavye.close();
+		while(sayi>0){
+			
+		fakt=sayi*fakt;
+		
+		sayi--;
+				
+			}
+		System.out.println( "Faktöriyel = " +fakt);
+    
+    }
+     }
