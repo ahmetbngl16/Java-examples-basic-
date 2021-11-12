@@ -4,7 +4,7 @@ public class AsalSayiBulma {
 	public static void main(String[] args) {
 		// girilen sayının asal olup olmadığını bulan program
         
-		double input;
+		int input;
 		int i;
 		Scanner klavye = new Scanner(System.in);
 		boolean asal=true;
